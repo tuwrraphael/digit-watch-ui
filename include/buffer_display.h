@@ -7,4 +7,7 @@
 #define DISPLAY_HEIGHT (128)
 extern const nrf_lcd_t nrf_lcd_buffer_display;
 extern uint32_t display_buffer[4 * 128];
+
+void clear_display_buffer();
+void buffer_display_pixel_draw(uint16_t m_x, uint16_t m_y, uint32_t color);
 #endif

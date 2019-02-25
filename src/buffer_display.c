@@ -4,7 +4,7 @@
 
 uint32_t display_buffer[4 * 128];
 
-static void clear_display_buffer()
+void clear_display_buffer()
 {
     memset(display_buffer, 0xFFFFFFFF, sizeof(display_buffer));
 }
@@ -19,7 +19,7 @@ static void disp_def_uninit(void)
 {
 }
 
-static void disp_def_pixel_draw(uint16_t m_x, uint16_t m_y, uint32_t color)
+void buffer_display_pixel_draw(uint16_t m_x, uint16_t m_y, uint32_t color)
 {
     uint16_t x = 128 - m_y;
     uint16_t y = m_x;
@@ -42,7 +42,7 @@ static void disp_def_rect_draw(uint16_t x, uint16_t y, uint16_t width, uint16_t 
     {
         for (z = 0; z < width; z++)
         {
-            disp_def_pixel_draw(x + z, y + i, color);
+            buffer_display_pixel_draw(x + z, y + i, color);
         }
     }
 }
@@ -66,7 +66,7 @@ static lcd_cb_t display_cb = {
 const nrf_lcd_t nrf_lcd_buffer_display = {
     .lcd_init = disp_def_init,
     .lcd_uninit = disp_def_uninit,
-    .lcd_pixel_draw = disp_def_pixel_draw,
+    .lcd_pixel_draw = buffer_display_pixel_draw,
     .lcd_rect_draw = disp_def_rect_draw,
     .lcd_display = disp_def_dummy_display,
     .lcd_rotation_set = disp_def_rotation_set,
