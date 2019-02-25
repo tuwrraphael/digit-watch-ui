@@ -75,23 +75,7 @@ void draw_time_indicator(float s, float indicator_length, uint8_t thickness)
     }
 }
 
-typedef struct
-{
-    uint8_t minX;
-    uint8_t maxX;
-    uint8_t minY;
-    uint8_t maxY;
-} arc_boundaries_t;
-
-static void arc_draw_area(uint8_t x, uint8_t y, arc_boundaries_t *arc_boundaries)
-{
-    if (y >= arc_boundaries->minY && x >= arc_boundaries->minX)
-    {
-        buffer_display_pixel_draw(x, y, 1);
-    }
-}
-
-static void draw_arc_line(float s)
+void draw_arc_line(float s, packed_image_t *icon)
 {
     uint8_t radius = 60;
     uint8_t outerRadius = 64;
@@ -100,48 +84,38 @@ static void draw_arc_line(float s)
     float arg = to_arg(s);
     float sinArg = (float)sin(arg);
     float cosArg = (float)cos(arg);
-    uint8_t yOuter = (uint8_t)(centerY - (sinArg * outerRadius));
-    uint8_t xOuter = (uint8_t)(centerX + (cosArg * outerRadius));
-    uint8_t y = (uint8_t)(centerY - (sinArg * radius));
-    uint8_t x = (uint8_t)(centerX + (cosArg * radius));
+    float yOuter = (centerY - (sinArg * outerRadius));
+    float xOuter = (centerX + (cosArg * outerRadius));
+    float y = (centerY - (sinArg * radius));
+    float x = (centerX + (cosArg * radius));
 
     if (x < xOuter || y < yOuter)
     {
         nrf_gfx_line_t line = NRF_GFX_LINE(
-            x,
-            y,
-            xOuter,
-            yOuter, 1);
+            (uint8_t)x,
+            (uint8_t)y,
+            (uint8_t)xOuter,
+            (uint8_t)yOuter, 1);
         (nrf_gfx_line_draw(&nrf_lcd_buffer_display, &line, 1));
     }
     else
     {
         nrf_gfx_line_t line = NRF_GFX_LINE(
-            xOuter,
-            yOuter,
-            x,
-            y, 1);
+            (uint8_t)xOuter,
+            (uint8_t)yOuter,
+            (uint8_t)x,
+            (uint8_t)y, 1);
         (nrf_gfx_line_draw(&nrf_lcd_buffer_display, &line, 1));
     }
-}
-
-void draw_time_arc(float from_s, float to_s)
-{
-    if (from_s > 60 || to_s > 60)
+    if (NULL != icon)
     {
-        return;
-    }
-    float init;
-    if (from_s > to_s)
-    {
-        init = from_s - 60.0f;
-    }
-    else
-    {
-        init = from_s;
-    }
-    for (float s = init; s < to_s; s += 0.3f)
-    {
-        draw_arc_line(s);
+        float vecX = (x - xOuter) * 1.5f;
+        float vecY = (y - yOuter) * 1.5f;
+        float imgCenterX = x + vecX;
+        float imgCenterY = y + vecY;
+        buffer_display_pixel_draw(imgCenterX, imgCenterY, 1);
+        uint8_t imgX = (uint8_t)(imgCenterX - icon->width / 2);
+        uint8_t imgY = (uint8_t)(imgCenterY - icon->height / 2);
+        render_packed_image(icon, imgX, imgY);
     }
 }

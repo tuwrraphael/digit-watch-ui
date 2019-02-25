@@ -1,5 +1,6 @@
 #include "digit_ui_model.h"
 #include "digit_ui_gfx.h"
+#include "digit_assets.h"
 
 #include <time.h>
 
@@ -23,19 +24,18 @@ void digit_ui_render(digit_ui_state_t *state)
         struct tm departureTime = *localtime(&state->directions.departure_time);
         struct tm arrivalTime = *localtime(&state->directions.arrival_time);
         struct tm eventStartTime = *localtime(&state->event_start_time);
-        draw_time_arc(overflow_minutes(departureTime.tm_min - 6), departureTime.tm_min);
+        draw_arc_line(departureTime.tm_min, &icon_leave2);
+        draw_arc_line(arrivalTime.tm_min, &icon_target);
         double late = difftime(&state->event_start_time, &state->directions.arrival_time);
         if (late > 0)
         {
-            draw_time_arc(eventStartTime.tm_min, arrivalTime.tm_min);
         }
         else
         {
-            draw_time_arc(arrivalTime.tm_min, eventStartTime.tm_min);
         }
         double leaveIn = difftime(&state->current_time, &state->directions.departure_time);
-        if (leaveIn > 0 && leaveIn < 6) {
-            
+        if (leaveIn > 0 && leaveIn < 6)
+        {
         }
     }
 }

@@ -4,5 +4,5 @@
 #include <stdint.h>
 void render_packed_image(packed_image_t *img, uint8_t m_x, uint8_t m_y);
 void draw_time_indicator(float s, float indicator_length, uint8_t thickness);
-void draw_time_arc(float from_s, float to_s);
+void draw_arc_line(float s, packed_image_t *icon);
 #endif
