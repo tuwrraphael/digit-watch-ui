@@ -26,16 +26,17 @@ void digit_ui_render(digit_ui_state_t *state)
         struct tm eventStartTime = *localtime(&state->event_start_time);
         draw_arc_line(departureTime.tm_min, &icon_leave2);
         draw_arc_line(arrivalTime.tm_min, &icon_target);
-        double late = difftime(&state->event_start_time, &state->directions.arrival_time);
+        double late = difftime(state->event_start_time, state->directions.arrival_time);
         if (late > 0)
         {
         }
         else
         {
         }
-        double leaveIn = difftime(&state->current_time, &state->directions.departure_time);
-        if (leaveIn > 0 && leaveIn < 6)
+        double leaveIn = difftime(state->directions.departure_time, state->current_time);
+        if (leaveIn >= 0 && leaveIn <= 1800)
         {
+            render_timestamped_line(state->event_subject, leaveIn / 60, &icon_event, 80);
         }
     }
 }
