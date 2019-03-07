@@ -186,3 +186,14 @@ void render_timestamped_line(char *text, uint8_t minutes, packed_image_t *icon, 
     text_start.x = printX - timeLength - TIME_ICON_PADDING;
     nrf_gfx_print(&nrf_lcd_buffer_display, &text_start, 1, timeString, p_font, false);
 }
+
+void render_text_centered(char *text, uint8_t y)
+{
+    int16_t printX = DISPLAY_CENTER_X - measure(text) / 2;
+    if (printX < 0)
+    {
+        printX =  border_padding(y, p_font->height);
+    }
+    nrf_gfx_point_t text_start = NRF_GFX_POINT(printX, y);
+    nrf_gfx_print(&nrf_lcd_buffer_display, &text_start, 1, text, p_font, false);
+}

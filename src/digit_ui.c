@@ -1,8 +1,12 @@
 #include "digit_ui_model.h"
 #include "digit_ui_gfx.h"
 #include "digit_assets.h"
+#include "roboto8pt.h"
+#include <stdio.h>
 
 #include <time.h>
+
+#define ARRAY_LEN(x) (sizeof(x) / sizeof(x[0]))
 
 static uint8_t overflow_minutes(int16_t minutes)
 {
@@ -11,6 +15,28 @@ static uint8_t overflow_minutes(int16_t minutes)
         return 60 - minutes;
     }
     return minutes;
+}
+
+typedef struct
+{
+    double departureIn;
+    directions_leg_t *leg_ptr;
+} next_leg_t;
+
+static next_leg_t get_next_leg(digit_ui_state_t *state)
+{
+    next_leg_t next_leg = {
+        .leg_ptr = NULL};
+    for (uint8_t i = 0; i < state->directions.legs_count; i++)
+    {
+        next_leg.departureIn = difftime(state->directions.legs[i].departure_time, state->current_time);
+        if (next_leg.departureIn > 0)
+        {
+            next_leg.leg_ptr = &state->directions.legs[i];
+            break;
+        }
+    }
+    return next_leg;
 }
 
 void digit_ui_render(digit_ui_state_t *state)
@@ -34,9 +60,26 @@ void digit_ui_render(digit_ui_state_t *state)
         {
         }
         double leaveIn = difftime(state->directions.departure_time, state->current_time);
+        next_leg_t next_leg = get_next_leg(state);
+        char line_display[20];
+
         if (leaveIn >= 0 && leaveIn <= 1800)
         {
-            render_timestamped_line(state->event_subject, leaveIn / 60, &icon_event, 80);
+            render_timestamped_line(state->event_subject, (uint8_t)(leaveIn / 60), &icon_event, 80);
+            // if (NULL != next_leg.leg_ptr)
+            // {
+            //     snprintf(line_display, ARRAY_LEN(line_display), "%s %s", next_leg.leg_ptr->line, next_leg.leg_ptr->departure_stop);
+            //     render_text_centered(line_display, 80 + roboto_8ptFontInfo.height);
+            // }
+        }
+        else
+        {
+            if (NULL != next_leg.leg_ptr)
+            {
+                snprintf(line_display, ARRAY_LEN(line_display), "%s %s", next_leg.leg_ptr->line, next_leg.leg_ptr->direction);
+                render_timestamped_line(line_display, (uint8_t)(next_leg.departureIn / 60), &icon_transit, 70 + roboto_8ptFontInfo.height);
+                render_text_centered(next_leg.leg_ptr->departure_stop, 70);
+            }
         }
     }
 }

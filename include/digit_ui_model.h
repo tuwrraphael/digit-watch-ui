@@ -6,10 +6,10 @@
 
 typedef struct
 {
-    char arrival_stop[10];
-    char departure_stop[10];
-    char line[4];
-    char direction[10];
+    char arrival_stop[20];
+    char departure_stop[20];
+    char line[6];
+    char direction[20];
     time_t departure_time;
 } directions_leg_t;
 
