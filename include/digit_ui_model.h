@@ -4,12 +4,16 @@
 #include <time.h>
 #include <stdint.h>
 
+#define SUBJECT_LENGTH (20)
+#define STOP_LENGTH (20)
+#define LINE_LENGTH (6)
+
 typedef struct
 {
-    char arrival_stop[20];
-    char departure_stop[20];
-    char line[6];
-    char direction[20];
+    char arrival_stop[STOP_LENGTH];
+    char departure_stop[STOP_LENGTH];
+    char line[LINE_LENGTH];
+    char direction[STOP_LENGTH];
     time_t departure_time;
 } directions_leg_t;
 
@@ -33,7 +37,7 @@ typedef struct
 {
     time_t current_time;
     time_t event_start_time;
-    char event_subject[20];
+    char event_subject[SUBJECT_LENGTH];
     directions_t directions;
     uint8_t displayed_step;
     digit_ui_state_flags_t display_options;
