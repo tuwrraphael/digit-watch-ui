@@ -6,7 +6,9 @@
 
 #define SUBJECT_LENGTH (20)
 #define STOP_LENGTH (20)
+#define DIRECTION_LENGTH (20)
 #define LINE_LENGTH (6)
+#define MAX_LEGS_COUNT (16)
 
 typedef struct
 {
@@ -21,6 +23,7 @@ typedef struct
 {
     directions_leg_t *legs;
     uint8_t legs_count;
+    uint16_t valid_legs;
     time_t departure_time;
     time_t arrival_time;
 } directions_t;
@@ -48,7 +51,9 @@ typedef struct
         .display_options = {.flags = 0}, \
         .event_subject = "",             \
         .displayed_step = 1,             \
-        .directions = {.legs_count = 0 } \
+        .directions = {.legs_count = 0,  \
+                       .legs = NULL,     \
+                       .valid_legs = 0 } \
     }
 
 #endif
