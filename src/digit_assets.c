@@ -21,32 +21,32 @@ const packed_image_t icon_event = {
     .startBit = 0,
     .width = 12,
     .height = 12,
-    .data = &data};
+    .data = data};
 
 const packed_image_t icon_leave1 = {
     .startByte = 4,
     .startBit = 16,
     .width = 7,
     .height = 7,
-    .data = &data};
+    .data = data};
 
 const packed_image_t icon_leave2 = {
     .startByte = 6,
     .startBit = 1,
     .width = 7,
     .height = 7,
-    .data = &data};
+    .data = data};
 
 const packed_image_t icon_target = {
     .startByte = 7,
     .startBit = 18,
     .width = 7,
     .height = 7,
-    .data = &data};
+    .data = data};
 
 const packed_image_t icon_transit = {
     .startByte = 9,
     .startBit = 3,
     .width = 12,
     .height = 12,
-    .data = &data};
+    .data = data};

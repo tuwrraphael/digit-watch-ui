@@ -7,6 +7,6 @@ typedef struct
     uint8_t startBit;
     uint8_t width;
     uint8_t height;
-    uint32_t *data;
+    const uint32_t *data;
 } packed_image_t;
 #endif

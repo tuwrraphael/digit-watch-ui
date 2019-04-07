@@ -32,6 +32,7 @@ typedef union {
     struct
     {
         uint8_t directions_active : 1;
+        uint8_t event_active : 1;
     };
     uint8_t flags;
 } digit_ui_state_flags_t;

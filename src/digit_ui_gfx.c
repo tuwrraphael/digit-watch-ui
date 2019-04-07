@@ -82,7 +82,7 @@ void draw_time_indicator(float s, float indicator_length, uint8_t thickness)
     }
 }
 
-void draw_arc_line(float s, packed_image_t *icon)
+void draw_arc_line(float s, const packed_image_t *icon)
 {
     uint8_t radius = 60;
     uint8_t outerRadius = 64;
@@ -152,7 +152,7 @@ static uint8_t measure(char *text)
 #define TIME_ICON_PADDING (2)
 #define ICON_FONT_Y_ALIGN (1)
 #define BORDER_RADIUS (63)
-static double border_padding(y, height)
+static double border_padding(uint8_t y, uint8_t height)
 {
     if (y > DISPLAY_CENTER_Y)
     {
@@ -165,7 +165,7 @@ static double border_padding(y, height)
     return (DISPLAY_CENTER_X - sqrt(BORDER_RADIUS * BORDER_RADIUS - (y - DISPLAY_CENTER_Y) * (y - DISPLAY_CENTER_Y)));
 }
 
-void render_timestamped_line(char *text, uint8_t minutes, packed_image_t *icon, uint8_t y)
+void render_timestamped_line(char *text, uint8_t minutes, const packed_image_t *icon, uint8_t y)
 {
     if (minutes > 99)
     {

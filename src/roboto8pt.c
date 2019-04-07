@@ -8,6 +8,7 @@ const uint8_t roboto_8ptBitmaps[] =
 {
 	// @0 '!' (1 pixels wide)
 	0x00, //  
+	0x00, //  
 	0x80, // #
 	0x80, // #
 	0x80, // #
@@ -20,7 +21,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //  
 	0x00, //  
 
-	// @12 '"' (2 pixels wide)
+	// @13 '"' (2 pixels wide)
+	0x00, //   
 	0x00, //   
 	0xC0, // ##
 	0xC0, // ##
@@ -34,7 +36,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //   
 	0x00, //   
 
-	// @24 '#' (6 pixels wide)
+	// @26 '#' (6 pixels wide)
+	0x00, //       
 	0x00, //       
 	0x28, //   # # 
 	0x48, //  #  # 
@@ -48,7 +51,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //       
 	0x00, //       
 
-	// @36 '$' (5 pixels wide)
+	// @39 '$' (5 pixels wide)
+	0x00, //      
 	0x20, //   #  
 	0x70, //  ### 
 	0x90, // #  # 
@@ -62,7 +66,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //      
 	0x00, //      
 
-	// @48 '%' (7 pixels wide)
+	// @52 '%' (7 pixels wide)
+	0x00, //        
 	0x00, //        
 	0xC0, // ##     
 	0xA8, // # # #  
@@ -76,7 +81,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //        
 	0x00, //        
 
-	// @60 '&' (6 pixels wide)
+	// @65 '&' (6 pixels wide)
+	0x00, //       
 	0x00, //       
 	0x70, //  ###  
 	0x90, // #  #  
@@ -90,7 +96,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //       
 	0x00, //       
 
-	// @72 ''' (1 pixels wide)
+	// @78 ''' (1 pixels wide)
+	0x00, //  
 	0x00, //  
 	0x80, // #
 	0x80, // #
@@ -104,7 +111,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //  
 	0x00, //  
 
-	// @84 '(' (3 pixels wide)
+	// @91 '(' (3 pixels wide)
+	0x00, //    
 	0x40, //  # 
 	0x60, //  ##
 	0x80, // #  
@@ -118,7 +126,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x40, //  # 
 	0x20, //   #
 
-	// @96 ')' (3 pixels wide)
+	// @104 ')' (3 pixels wide)
+	0x00, //    
 	0x80, // #  
 	0x40, //  # 
 	0x40, //  # 
@@ -132,7 +141,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x40, //  # 
 	0x80, // #  
 
-	// @108 '*' (5 pixels wide)
+	// @117 '*' (5 pixels wide)
+	0x00, //      
 	0x00, //      
 	0x20, //   #  
 	0xB0, // # ## 
@@ -146,7 +156,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //      
 	0x00, //      
 
-	// @120 '+' (6 pixels wide)
+	// @130 '+' (6 pixels wide)
+	0x00, //       
 	0x00, //       
 	0x00, //       
 	0x00, //       
@@ -160,7 +171,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //       
 	0x00, //       
 
-	// @132 ',' (2 pixels wide)
+	// @143 ',' (2 pixels wide)
+	0x00, //   
 	0x00, //   
 	0x00, //   
 	0x00, //   
@@ -174,7 +186,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x80, // # 
 	0x00, //   
 
-	// @144 '-' (3 pixels wide)
+	// @156 '-' (3 pixels wide)
+	0x00, //    
 	0x00, //    
 	0x00, //    
 	0x00, //    
@@ -188,7 +201,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //    
 	0x00, //    
 
-	// @156 '.' (1 pixels wide)
+	// @169 '.' (1 pixels wide)
+	0x00, //  
 	0x00, //  
 	0x00, //  
 	0x00, //  
@@ -202,7 +216,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //  
 	0x00, //  
 
-	// @168 '/' (4 pixels wide)
+	// @182 '/' (4 pixels wide)
+	0x00, //     
 	0x00, //     
 	0x10, //    #
 	0x10, //    #
@@ -216,7 +231,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //     
 	0x00, //     
 
-	// @180 '0' (5 pixels wide)
+	// @195 '0' (5 pixels wide)
+	0x00, //      
 	0x00, //      
 	0x70, //  ### 
 	0x90, // #  # 
@@ -230,7 +246,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //      
 	0x00, //      
 
-	// @192 '1' (3 pixels wide)
+	// @208 '1' (3 pixels wide)
+	0x00, //    
 	0x00, //    
 	0x60, //  ##
 	0xA0, // # #
@@ -244,7 +261,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //    
 	0x00, //    
 
-	// @204 '2' (6 pixels wide)
+	// @221 '2' (6 pixels wide)
+	0x00, //       
 	0x00, //       
 	0x78, //  #### 
 	0x48, //  #  # 
@@ -258,7 +276,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //       
 	0x00, //       
 
-	// @216 '3' (5 pixels wide)
+	// @234 '3' (5 pixels wide)
+	0x00, //      
 	0x00, //      
 	0x78, //  ####
 	0x48, //  #  #
@@ -272,7 +291,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //      
 	0x00, //      
 
-	// @228 '4' (6 pixels wide)
+	// @247 '4' (6 pixels wide)
+	0x00, //       
 	0x00, //       
 	0x18, //    ## 
 	0x18, //    ## 
@@ -286,7 +306,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //       
 	0x00, //       
 
-	// @240 '5' (5 pixels wide)
+	// @260 '5' (5 pixels wide)
+	0x00, //      
 	0x00, //      
 	0xF8, // #####
 	0x80, // #    
@@ -300,7 +321,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //      
 	0x00, //      
 
-	// @252 '6' (5 pixels wide)
+	// @273 '6' (5 pixels wide)
+	0x00, //      
 	0x00, //      
 	0x70, //  ### 
 	0xC0, // ##   
@@ -314,7 +336,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //      
 	0x00, //      
 
-	// @264 '7' (6 pixels wide)
+	// @286 '7' (6 pixels wide)
+	0x00, //       
 	0x00, //       
 	0xFC, // ######
 	0x08, //     # 
@@ -328,7 +351,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //       
 	0x00, //       
 
-	// @276 '8' (5 pixels wide)
+	// @299 '8' (5 pixels wide)
+	0x00, //      
 	0x00, //      
 	0xF0, // #### 
 	0x90, // #  # 
@@ -342,7 +366,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //      
 	0x00, //      
 
-	// @288 '9' (4 pixels wide)
+	// @312 '9' (4 pixels wide)
+	0x00, //     
 	0x00, //     
 	0xE0, // ### 
 	0x90, // #  #
@@ -356,7 +381,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //     
 	0x00, //     
 
-	// @300 ':' (1 pixels wide)
+	// @325 ':' (1 pixels wide)
+	0x00, //  
 	0x00, //  
 	0x00, //  
 	0x00, //  
@@ -370,7 +396,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //  
 	0x00, //  
 
-	// @312 ';' (2 pixels wide)
+	// @338 ';' (2 pixels wide)
+	0x00, //   
 	0x00, //   
 	0x00, //   
 	0x00, //   
@@ -384,7 +411,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x80, // # 
 	0x00, //   
 
-	// @324 '<' (5 pixels wide)
+	// @351 '<' (5 pixels wide)
+	0x00, //      
 	0x00, //      
 	0x00, //      
 	0x00, //      
@@ -398,7 +426,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //      
 	0x00, //      
 
-	// @336 '=' (4 pixels wide)
+	// @364 '=' (4 pixels wide)
+	0x00, //     
 	0x00, //     
 	0x00, //     
 	0x00, //     
@@ -412,7 +441,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //     
 	0x00, //     
 
-	// @348 '>' (4 pixels wide)
+	// @377 '>' (4 pixels wide)
+	0x00, //     
 	0x00, //     
 	0x00, //     
 	0x00, //     
@@ -426,7 +456,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //     
 	0x00, //     
 
-	// @360 '?' (5 pixels wide)
+	// @390 '?' (5 pixels wide)
+	0x00, //      
 	0x00, //      
 	0x70, //  ### 
 	0xC8, // ##  #
@@ -440,7 +471,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //      
 	0x00, //      
 
-	// @372 '@' (8 pixels wide)
+	// @403 '@' (8 pixels wide)
+	0x00, //         
 	0x00, //         
 	0x3C, //   ####  
 	0x42, //  #    # 
@@ -454,7 +486,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x3C, //   ####  
 	0x00, //         
 
-	// @384 'A' (7 pixels wide)
+	// @416 'A' (7 pixels wide)
+	0x00, //        
 	0x00, //        
 	0x10, //    #   
 	0x28, //   # #  
@@ -468,7 +501,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //        
 	0x00, //        
 
-	// @396 'B' (5 pixels wide)
+	// @429 'B' (5 pixels wide)
+	0x00, //      
 	0x00, //      
 	0xF0, // #### 
 	0x88, // #   #
@@ -482,7 +516,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //      
 	0x00, //      
 
-	// @408 'C' (6 pixels wide)
+	// @442 'C' (6 pixels wide)
+	0x00, //       
 	0x00, //       
 	0x78, //  #### 
 	0x88, // #   # 
@@ -496,7 +531,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //       
 	0x00, //       
 
-	// @420 'D' (6 pixels wide)
+	// @455 'D' (6 pixels wide)
+	0x00, //       
 	0x00, //       
 	0xF0, // ####  
 	0x88, // #   # 
@@ -510,7 +546,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //       
 	0x00, //       
 
-	// @432 'E' (5 pixels wide)
+	// @468 'E' (5 pixels wide)
+	0x00, //      
 	0x00, //      
 	0xF8, // #####
 	0x80, // #    
@@ -524,7 +561,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //      
 	0x00, //      
 
-	// @444 'F' (5 pixels wide)
+	// @481 'F' (5 pixels wide)
+	0x00, //      
 	0x00, //      
 	0xF8, // #####
 	0x80, // #    
@@ -538,7 +576,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //      
 	0x00, //      
 
-	// @456 'G' (6 pixels wide)
+	// @494 'G' (6 pixels wide)
+	0x00, //       
 	0x00, //       
 	0x78, //  #### 
 	0x88, // #   # 
@@ -552,7 +591,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //       
 	0x00, //       
 
-	// @468 'H' (6 pixels wide)
+	// @507 'H' (6 pixels wide)
+	0x00, //       
 	0x00, //       
 	0x84, // #    #
 	0x84, // #    #
@@ -566,7 +606,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //       
 	0x00, //       
 
-	// @480 'I' (1 pixels wide)
+	// @520 'I' (1 pixels wide)
+	0x00, //  
 	0x00, //  
 	0x80, // #
 	0x80, // #
@@ -580,7 +621,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //  
 	0x00, //  
 
-	// @492 'J' (5 pixels wide)
+	// @533 'J' (5 pixels wide)
+	0x00, //      
 	0x00, //      
 	0x08, //     #
 	0x08, //     #
@@ -594,7 +636,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //      
 	0x00, //      
 
-	// @504 'K' (6 pixels wide)
+	// @546 'K' (6 pixels wide)
+	0x00, //       
 	0x00, //       
 	0x8C, // #   ##
 	0x90, // #  #  
@@ -608,7 +651,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //       
 	0x00, //       
 
-	// @516 'L' (5 pixels wide)
+	// @559 'L' (5 pixels wide)
+	0x00, //      
 	0x00, //      
 	0x80, // #    
 	0x80, // #    
@@ -622,7 +666,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //      
 	0x00, //      
 
-	// @528 'M' (8 pixels wide)
+	// @572 'M' (8 pixels wide)
+	0x00, //         
 	0x00, //         
 	0x83, // #     ##
 	0xC3, // ##    ##
@@ -636,7 +681,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //         
 	0x00, //         
 
-	// @540 'N' (6 pixels wide)
+	// @585 'N' (6 pixels wide)
+	0x00, //       
 	0x00, //       
 	0x84, // #    #
 	0xC4, // ##   #
@@ -650,7 +696,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //       
 	0x00, //       
 
-	// @552 'O' (6 pixels wide)
+	// @598 'O' (6 pixels wide)
+	0x00, //       
 	0x00, //       
 	0x78, //  #### 
 	0x88, // #   # 
@@ -664,7 +711,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //       
 	0x00, //       
 
-	// @564 'P' (6 pixels wide)
+	// @611 'P' (6 pixels wide)
+	0x00, //       
 	0x00, //       
 	0xF8, // ##### 
 	0x88, // #   # 
@@ -678,7 +726,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //       
 	0x00, //       
 
-	// @576 'Q' (6 pixels wide)
+	// @624 'Q' (6 pixels wide)
+	0x00, //       
 	0x00, //       
 	0x78, //  #### 
 	0xCC, // ##  ##
@@ -692,7 +741,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //       
 	0x00, //       
 
-	// @588 'R' (6 pixels wide)
+	// @637 'R' (6 pixels wide)
+	0x00, //       
 	0x00, //       
 	0xF0, // ####  
 	0x88, // #   # 
@@ -706,7 +756,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //       
 	0x00, //       
 
-	// @600 'S' (5 pixels wide)
+	// @650 'S' (5 pixels wide)
+	0x00, //      
 	0x00, //      
 	0x70, //  ### 
 	0x88, // #   #
@@ -720,7 +771,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //      
 	0x00, //      
 
-	// @612 'T' (6 pixels wide)
+	// @663 'T' (6 pixels wide)
+	0x00, //       
 	0x00, //       
 	0xFC, // ######
 	0x10, //    #  
@@ -734,7 +786,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //       
 	0x00, //       
 
-	// @624 'U' (5 pixels wide)
+	// @676 'U' (5 pixels wide)
+	0x00, //      
 	0x00, //      
 	0x88, // #   #
 	0x88, // #   #
@@ -748,7 +801,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //      
 	0x00, //      
 
-	// @636 'V' (7 pixels wide)
+	// @689 'V' (7 pixels wide)
+	0x00, //        
 	0x00, //        
 	0x82, // #     #
 	0x44, //  #   # 
@@ -762,7 +816,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //        
 	0x00, //        
 
-	// @648 'W' (10 pixels wide)
+	// @702 'W' (10 pixels wide)
+	0x00, 0x00, //           
 	0x00, 0x00, //           
 	0x8C, 0xC0, // #   ##  ##
 	0x4C, 0x80, //  #  ##  # 
@@ -776,7 +831,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, 0x00, //           
 	0x00, 0x00, //           
 
-	// @672 'X' (7 pixels wide)
+	// @728 'X' (7 pixels wide)
+	0x00, //        
 	0x00, //        
 	0xC6, // ##   ##
 	0x4C, //  #  ## 
@@ -790,7 +846,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //        
 	0x00, //        
 
-	// @684 'Y' (7 pixels wide)
+	// @741 'Y' (7 pixels wide)
+	0x00, //        
 	0x00, //        
 	0xC6, // ##   ##
 	0x44, //  #   # 
@@ -804,7 +861,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //        
 	0x00, //        
 
-	// @696 'Z' (6 pixels wide)
+	// @754 'Z' (6 pixels wide)
+	0x00, //       
 	0x00, //       
 	0x7C, //  #####
 	0x0C, //     ##
@@ -818,7 +876,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //       
 	0x00, //       
 
-	// @708 '[' (2 pixels wide)
+	// @767 '[' (2 pixels wide)
+	0x00, //   
 	0xC0, // ##
 	0x80, // # 
 	0x80, // # 
@@ -832,7 +891,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0xC0, // ##
 	0x00, //   
 
-	// @720 '\' (4 pixels wide)
+	// @780 '\' (4 pixels wide)
+	0x00, //     
 	0x00, //     
 	0x80, // #   
 	0x40, //  #  
@@ -846,7 +906,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //     
 	0x00, //     
 
-	// @732 ']' (2 pixels wide)
+	// @793 ']' (2 pixels wide)
+	0x00, //   
 	0xC0, // ##
 	0x40, //  #
 	0x40, //  #
@@ -860,7 +921,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0xC0, // ##
 	0x00, //   
 
-	// @744 '^' (3 pixels wide)
+	// @806 '^' (3 pixels wide)
+	0x00, //    
 	0x00, //    
 	0x40, //  # 
 	0xC0, // ## 
@@ -874,7 +936,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //    
 	0x00, //    
 
-	// @756 '_' (5 pixels wide)
+	// @819 '_' (5 pixels wide)
+	0x00, //      
 	0x00, //      
 	0x00, //      
 	0x00, //      
@@ -888,7 +951,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //      
 	0x00, //      
 
-	// @768 '`' (3 pixels wide)
+	// @832 '`' (3 pixels wide)
+	0x00, //    
 	0xC0, // ## 
 	0x60, //  ##
 	0x00, //    
@@ -902,7 +966,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //    
 	0x00, //    
 
-	// @780 'a' (4 pixels wide)
+	// @845 'a' (4 pixels wide)
+	0x00, //     
 	0x00, //     
 	0x00, //     
 	0x00, //     
@@ -916,7 +981,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //     
 	0x00, //     
 
-	// @792 'b' (5 pixels wide)
+	// @858 'b' (5 pixels wide)
+	0x00, //      
 	0x00, //      
 	0x80, // #    
 	0x80, // #    
@@ -930,7 +996,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //      
 	0x00, //      
 
-	// @804 'c' (5 pixels wide)
+	// @871 'c' (5 pixels wide)
+	0x00, //      
 	0x00, //      
 	0x00, //      
 	0x00, //      
@@ -944,7 +1011,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //      
 	0x00, //      
 
-	// @816 'd' (5 pixels wide)
+	// @884 'd' (5 pixels wide)
+	0x00, //      
 	0x00, //      
 	0x08, //     #
 	0x08, //     #
@@ -958,7 +1026,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //      
 	0x00, //      
 
-	// @828 'e' (5 pixels wide)
+	// @897 'e' (5 pixels wide)
+	0x00, //      
 	0x00, //      
 	0x00, //      
 	0x00, //      
@@ -972,7 +1041,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //      
 	0x00, //      
 
-	// @840 'f' (4 pixels wide)
+	// @910 'f' (4 pixels wide)
+	0x00, //     
 	0x30, //   ##
 	0x40, //  #  
 	0x40, //  #  
@@ -986,7 +1056,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //     
 	0x00, //     
 
-	// @852 'g' (5 pixels wide)
+	// @923 'g' (5 pixels wide)
+	0x00, //      
 	0x00, //      
 	0x00, //      
 	0x00, //      
@@ -1000,7 +1071,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x78, //  ####
 	0x00, //      
 
-	// @864 'h' (4 pixels wide)
+	// @936 'h' (4 pixels wide)
+	0x00, //     
 	0x00, //     
 	0x80, // #   
 	0x80, // #   
@@ -1014,7 +1086,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //     
 	0x00, //     
 
-	// @876 'i' (1 pixels wide)
+	// @949 'i' (1 pixels wide)
+	0x00, //  
 	0x00, //  
 	0x80, // #
 	0x00, //  
@@ -1028,7 +1101,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //  
 	0x00, //  
 
-	// @888 'j' (2 pixels wide)
+	// @962 'j' (2 pixels wide)
+	0x00, //   
 	0x00, //   
 	0x40, //  #
 	0x00, //   
@@ -1042,7 +1116,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0xC0, // ##
 	0x00, //   
 
-	// @900 'k' (5 pixels wide)
+	// @975 'k' (5 pixels wide)
+	0x00, //      
 	0x80, // #    
 	0x80, // #    
 	0x80, // #    
@@ -1056,7 +1131,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //      
 	0x00, //      
 
-	// @912 'l' (1 pixels wide)
+	// @988 'l' (1 pixels wide)
+	0x00, //  
 	0x80, // #
 	0x80, // #
 	0x80, // #
@@ -1070,7 +1146,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //  
 	0x00, //  
 
-	// @924 'm' (8 pixels wide)
+	// @1001 'm' (8 pixels wide)
+	0x00, //         
 	0x00, //         
 	0x00, //         
 	0x00, //         
@@ -1084,7 +1161,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //         
 	0x00, //         
 
-	// @936 'n' (4 pixels wide)
+	// @1014 'n' (4 pixels wide)
+	0x00, //     
 	0x00, //     
 	0x00, //     
 	0x00, //     
@@ -1098,7 +1176,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //     
 	0x00, //     
 
-	// @948 'o' (6 pixels wide)
+	// @1027 'o' (6 pixels wide)
+	0x00, //       
 	0x00, //       
 	0x00, //       
 	0x00, //       
@@ -1112,7 +1191,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //       
 	0x00, //       
 
-	// @960 'p' (5 pixels wide)
+	// @1040 'p' (5 pixels wide)
+	0x00, //      
 	0x00, //      
 	0x00, //      
 	0x00, //      
@@ -1126,7 +1206,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x80, // #    
 	0x00, //      
 
-	// @972 'q' (5 pixels wide)
+	// @1053 'q' (5 pixels wide)
+	0x00, //      
 	0x00, //      
 	0x00, //      
 	0x00, //      
@@ -1140,7 +1221,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x08, //     #
 	0x00, //      
 
-	// @984 'r' (3 pixels wide)
+	// @1066 'r' (3 pixels wide)
+	0x00, //    
 	0x00, //    
 	0x00, //    
 	0x00, //    
@@ -1154,7 +1236,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //    
 	0x00, //    
 
-	// @996 's' (4 pixels wide)
+	// @1079 's' (4 pixels wide)
+	0x00, //     
 	0x00, //     
 	0x00, //     
 	0x00, //     
@@ -1168,7 +1251,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //     
 	0x00, //     
 
-	// @1008 't' (3 pixels wide)
+	// @1092 't' (3 pixels wide)
+	0x00, //    
 	0x00, //    
 	0x00, //    
 	0x40, //  # 
@@ -1182,7 +1266,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //    
 	0x00, //    
 
-	// @1020 'u' (4 pixels wide)
+	// @1105 'u' (4 pixels wide)
+	0x00, //     
 	0x00, //     
 	0x00, //     
 	0x00, //     
@@ -1196,7 +1281,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //     
 	0x00, //     
 
-	// @1032 'v' (5 pixels wide)
+	// @1118 'v' (5 pixels wide)
+	0x00, //      
 	0x00, //      
 	0x00, //      
 	0x00, //      
@@ -1210,7 +1296,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //      
 	0x00, //      
 
-	// @1044 'w' (8 pixels wide)
+	// @1131 'w' (8 pixels wide)
+	0x00, //         
 	0x00, //         
 	0x00, //         
 	0x00, //         
@@ -1224,7 +1311,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //         
 	0x00, //         
 
-	// @1056 'x' (5 pixels wide)
+	// @1144 'x' (5 pixels wide)
+	0x00, //      
 	0x00, //      
 	0x00, //      
 	0x00, //      
@@ -1238,7 +1326,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //      
 	0x00, //      
 
-	// @1068 'y' (5 pixels wide)
+	// @1157 'y' (5 pixels wide)
+	0x00, //      
 	0x00, //      
 	0x00, //      
 	0x00, //      
@@ -1252,7 +1341,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0xC0, // ##   
 	0x00, //      
 
-	// @1080 'z' (5 pixels wide)
+	// @1170 'z' (5 pixels wide)
+	0x00, //      
 	0x00, //      
 	0x00, //      
 	0x00, //      
@@ -1266,7 +1356,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //      
 	0x00, //      
 
-	// @1092 '{' (4 pixels wide)
+	// @1183 '{' (4 pixels wide)
+	0x00, //     
 	0x30, //   ##
 	0x20, //   # 
 	0x20, //   # 
@@ -1280,7 +1371,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x30, //   ##
 	0x00, //     
 
-	// @1104 '|' (1 pixels wide)
+	// @1196 '|' (1 pixels wide)
+	0x00, //  
 	0x00, //  
 	0x80, // #
 	0x80, // #
@@ -1294,7 +1386,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //  
 	0x00, //  
 
-	// @1116 '}' (4 pixels wide)
+	// @1209 '}' (4 pixels wide)
+	0x00, //     
 	0xC0, // ##  
 	0x40, //  #  
 	0x40, //  #  
@@ -1308,7 +1401,8 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x80, // #   
 	0x00, //     
 
-	// @1128 '~' (7 pixels wide)
+	// @1222 '~' (7 pixels wide)
+	0x00, //        
 	0x00, //        
 	0x00, //        
 	0x00, //        
@@ -1321,6 +1415,111 @@ const uint8_t roboto_8ptBitmaps[] =
 	0x00, //        
 	0x00, //        
 	0x00, //        
+
+	// @1235 'Ä' (7 pixels wide)
+	0x28, //   # #  
+	0x00, //        
+	0x10, //    #   
+	0x28, //   # #  
+	0x28, //   # #  
+	0x28, //   # #  
+	0x44, //  #   # 
+	0x7C, //  ##### 
+	0x44, //  #   # 
+	0x82, // #     #
+	0x00, //        
+	0x00, //        
+	0x00, //        
+
+	// @1248 'Ö' (6 pixels wide)
+	0x28, //   # # 
+	0x00, //       
+	0x78, //  #### 
+	0x88, // #   # 
+	0x84, // #    #
+	0x84, // #    #
+	0x84, // #    #
+	0x84, // #    #
+	0x88, // #   # 
+	0x78, //  #### 
+	0x00, //       
+	0x00, //       
+	0x00, //       
+
+	// @1261 'Ü' (5 pixels wide)
+	0x50, //  # # 
+	0x00, //      
+	0x88, // #   #
+	0x88, // #   #
+	0x88, // #   #
+	0x88, // #   #
+	0x88, // #   #
+	0x88, // #   #
+	0x88, // #   #
+	0x70, //  ### 
+	0x00, //      
+	0x00, //      
+	0x00, //      
+
+	// @1274 'ß' (5 pixels wide)
+	0x00, //      
+	0x70, //  ### 
+	0x90, // #  # 
+	0x90, // #  # 
+	0x90, // #  # 
+	0xA0, // # #  
+	0x90, // #  # 
+	0x88, // #   #
+	0x88, // #   #
+	0xB8, // # ###
+	0x00, //      
+	0x00, //      
+	0x00, //      
+
+	// @1287 'ä' (4 pixels wide)
+	0x00, //     
+	0x00, //     
+	0x50, //  # #
+	0x00, //     
+	0xF0, // ####
+	0x10, //    #
+	0xF0, // ####
+	0x90, // #  #
+	0x90, // #  #
+	0xF0, // ####
+	0x00, //     
+	0x00, //     
+	0x00, //     
+
+	// @1300 'ö' (6 pixels wide)
+	0x00, //       
+	0x00, //       
+	0x28, //   # # 
+	0x00, //       
+	0x78, //  #### 
+	0x48, //  #  # 
+	0x84, // #    #
+	0x84, // #    #
+	0x48, //  #  # 
+	0x78, //  #### 
+	0x00, //       
+	0x00, //       
+	0x00, //       
+
+	// @1313 'ü' (4 pixels wide)
+	0x00, //     
+	0x00, //     
+	0x50, //  # #
+	0x00, //     
+	0x90, // #  #
+	0x90, // #  #
+	0x90, // #  #
+	0x90, // #  #
+	0x90, // #  #
+	0xF0, // ####
+	0x00, //     
+	0x00, //     
+	0x00, //     
 };
 
 // Character descriptors for Roboto 8pt
@@ -1328,109 +1527,234 @@ const uint8_t roboto_8ptBitmaps[] =
 const FONT_CHAR_INFO roboto_8ptDescriptors[] = 
 {
 	{1, 0}, 		// ! 
-	{2, 12}, 		// " 
-	{6, 24}, 		// # 
-	{5, 36}, 		// $ 
-	{7, 48}, 		// % 
-	{6, 60}, 		// & 
-	{1, 72}, 		// ' 
-	{3, 84}, 		// ( 
-	{3, 96}, 		// ) 
-	{5, 108}, 		// * 
-	{6, 120}, 		// + 
-	{2, 132}, 		// , 
-	{3, 144}, 		// - 
-	{1, 156}, 		// . 
-	{4, 168}, 		// / 
-	{5, 180}, 		// 0 
-	{3, 192}, 		// 1 
-	{6, 204}, 		// 2 
-	{5, 216}, 		// 3 
-	{6, 228}, 		// 4 
-	{5, 240}, 		// 5 
-	{5, 252}, 		// 6 
-	{6, 264}, 		// 7 
-	{5, 276}, 		// 8 
-	{4, 288}, 		// 9 
-	{1, 300}, 		// : 
-	{2, 312}, 		// ; 
-	{5, 324}, 		// < 
-	{4, 336}, 		// = 
-	{4, 348}, 		// > 
-	{5, 360}, 		// ? 
-	{8, 372}, 		// @ 
-	{7, 384}, 		// A 
-	{5, 396}, 		// B 
-	{6, 408}, 		// C 
-	{6, 420}, 		// D 
-	{5, 432}, 		// E 
-	{5, 444}, 		// F 
-	{6, 456}, 		// G 
-	{6, 468}, 		// H 
-	{1, 480}, 		// I 
-	{5, 492}, 		// J 
-	{6, 504}, 		// K 
-	{5, 516}, 		// L 
-	{8, 528}, 		// M 
-	{6, 540}, 		// N 
-	{6, 552}, 		// O 
-	{6, 564}, 		// P 
-	{6, 576}, 		// Q 
-	{6, 588}, 		// R 
-	{5, 600}, 		// S 
-	{6, 612}, 		// T 
-	{5, 624}, 		// U 
-	{7, 636}, 		// V 
-	{10, 648}, 		// W 
-	{7, 672}, 		// X 
-	{7, 684}, 		// Y 
-	{6, 696}, 		// Z 
-	{2, 708}, 		// [ 
-	{4, 720}, 		// \ 
-	{2, 732}, 		// ] 
-	{3, 744}, 		// ^ 
-	{5, 756}, 		// _ 
-	{3, 768}, 		// ` 
-	{4, 780}, 		// a 
-	{5, 792}, 		// b 
-	{5, 804}, 		// c 
-	{5, 816}, 		// d 
-	{5, 828}, 		// e 
-	{4, 840}, 		// f 
-	{5, 852}, 		// g 
-	{4, 864}, 		// h 
-	{1, 876}, 		// i 
-	{2, 888}, 		// j 
-	{5, 900}, 		// k 
-	{1, 912}, 		// l 
-	{8, 924}, 		// m 
-	{4, 936}, 		// n 
-	{6, 948}, 		// o 
-	{5, 960}, 		// p 
-	{5, 972}, 		// q 
-	{3, 984}, 		// r 
-	{4, 996}, 		// s 
-	{3, 1008}, 		// t 
-	{4, 1020}, 		// u 
-	{5, 1032}, 		// v 
-	{8, 1044}, 		// w 
-	{5, 1056}, 		// x 
-	{5, 1068}, 		// y 
-	{5, 1080}, 		// z 
-	{4, 1092}, 		// { 
-	{1, 1104}, 		// | 
-	{4, 1116}, 		// } 
-	{7, 1128}, 		// ~ 
+	{2, 13}, 		// " 
+	{6, 26}, 		// # 
+	{5, 39}, 		// $ 
+	{7, 52}, 		// % 
+	{6, 65}, 		// & 
+	{1, 78}, 		// ' 
+	{3, 91}, 		// ( 
+	{3, 104}, 		// ) 
+	{5, 117}, 		// * 
+	{6, 130}, 		// + 
+	{2, 143}, 		// , 
+	{3, 156}, 		// - 
+	{1, 169}, 		// . 
+	{4, 182}, 		// / 
+	{5, 195}, 		// 0 
+	{3, 208}, 		// 1 
+	{6, 221}, 		// 2 
+	{5, 234}, 		// 3 
+	{6, 247}, 		// 4 
+	{5, 260}, 		// 5 
+	{5, 273}, 		// 6 
+	{6, 286}, 		// 7 
+	{5, 299}, 		// 8 
+	{4, 312}, 		// 9 
+	{1, 325}, 		// : 
+	{2, 338}, 		// ; 
+	{5, 351}, 		// < 
+	{4, 364}, 		// = 
+	{4, 377}, 		// > 
+	{5, 390}, 		// ? 
+	{8, 403}, 		// @ 
+	{7, 416}, 		// A 
+	{5, 429}, 		// B 
+	{6, 442}, 		// C 
+	{6, 455}, 		// D 
+	{5, 468}, 		// E 
+	{5, 481}, 		// F 
+	{6, 494}, 		// G 
+	{6, 507}, 		// H 
+	{1, 520}, 		// I 
+	{5, 533}, 		// J 
+	{6, 546}, 		// K 
+	{5, 559}, 		// L 
+	{8, 572}, 		// M 
+	{6, 585}, 		// N 
+	{6, 598}, 		// O 
+	{6, 611}, 		// P 
+	{6, 624}, 		// Q 
+	{6, 637}, 		// R 
+	{5, 650}, 		// S 
+	{6, 663}, 		// T 
+	{5, 676}, 		// U 
+	{7, 689}, 		// V 
+	{10, 702}, 		// W 
+	{7, 728}, 		// X 
+	{7, 741}, 		// Y 
+	{6, 754}, 		// Z 
+	{2, 767}, 		// [ 
+	{4, 780}, 		/* \ */
+	{2, 793}, 		// ] 
+	{3, 806}, 		// ^ 
+	{5, 819}, 		// _ 
+	{3, 832}, 		// ` 
+	{4, 845}, 		// a 
+	{5, 858}, 		// b 
+	{5, 871}, 		// c 
+	{5, 884}, 		// d 
+	{5, 897}, 		// e 
+	{4, 910}, 		// f 
+	{5, 923}, 		// g 
+	{4, 936}, 		// h 
+	{1, 949}, 		// i 
+	{2, 962}, 		// j 
+	{5, 975}, 		// k 
+	{1, 988}, 		// l 
+	{8, 1001}, 		// m 
+	{4, 1014}, 		// n 
+	{6, 1027}, 		// o 
+	{5, 1040}, 		// p 
+	{5, 1053}, 		// q 
+	{3, 1066}, 		// r 
+	{4, 1079}, 		// s 
+	{3, 1092}, 		// t 
+	{4, 1105}, 		// u 
+	{5, 1118}, 		// v 
+	{8, 1131}, 		// w 
+	{5, 1144}, 		// x 
+	{5, 1157}, 		// y 
+	{5, 1170}, 		// z 
+	{4, 1183}, 		// { 
+	{1, 1196}, 		// | 
+	{4, 1209}, 		// } 
+	{7, 1222}, 		// ~ 
+	{0, 0}, 		//  
+	{0, 0}, 		//  
+	{0, 0}, 		//  
+	{0, 0}, 		//  
+	{0, 0}, 		//  
+	{0, 0}, 		//  
+	{0, 0}, 		//  
+	{0, 0}, 		//  
+	{0, 0}, 		//  
+	{0, 0}, 		//  
+	{0, 0}, 		//  
+	{0, 0}, 		//  
+	{0, 0}, 		//  
+	{0, 0}, 		//  
+	{0, 0}, 		//  
+	{0, 0}, 		//  
+	{0, 0}, 		//  
+	{0, 0}, 		//  
+	{0, 0}, 		//  
+	{0, 0}, 		//  
+	{0, 0}, 		//  
+	{0, 0}, 		//  
+	{0, 0}, 		//  
+	{0, 0}, 		//  
+	{0, 0}, 		//  
+	{0, 0}, 		//  
+	{0, 0}, 		//  
+	{0, 0}, 		//  
+	{0, 0}, 		//  
+	{0, 0}, 		//  
+	{0, 0}, 		//  
+	{0, 0}, 		//  
+	{0, 0}, 		//  
+	{0, 0}, 		//   
+	{0, 0}, 		// ¡ 
+	{0, 0}, 		// ¢ 
+	{0, 0}, 		// £ 
+	{0, 0}, 		// ¤ 
+	{0, 0}, 		// ¥ 
+	{0, 0}, 		// ¦ 
+	{0, 0}, 		// § 
+	{0, 0}, 		// ¨ 
+	{0, 0}, 		// © 
+	{0, 0}, 		// ª 
+	{0, 0}, 		// « 
+	{0, 0}, 		// ¬ 
+	{0, 0}, 		// ­ 
+	{0, 0}, 		// ® 
+	{0, 0}, 		// ¯ 
+	{0, 0}, 		// ° 
+	{0, 0}, 		// ± 
+	{0, 0}, 		// ² 
+	{0, 0}, 		// ³ 
+	{0, 0}, 		// ´ 
+	{0, 0}, 		// µ 
+	{0, 0}, 		// ¶ 
+	{0, 0}, 		// · 
+	{0, 0}, 		// ¸ 
+	{0, 0}, 		// ¹ 
+	{0, 0}, 		// º 
+	{0, 0}, 		// » 
+	{0, 0}, 		// ¼ 
+	{0, 0}, 		// ½ 
+	{0, 0}, 		// ¾ 
+	{0, 0}, 		// ¿ 
+	{0, 0}, 		// À 
+	{0, 0}, 		// Á 
+	{0, 0}, 		// Â 
+	{0, 0}, 		// Ã 
+	{7, 1235}, 		// Ä 
+	{0, 0}, 		// Å 
+	{0, 0}, 		// Æ 
+	{0, 0}, 		// Ç 
+	{0, 0}, 		// È 
+	{0, 0}, 		// É 
+	{0, 0}, 		// Ê 
+	{0, 0}, 		// Ë 
+	{0, 0}, 		// Ì 
+	{0, 0}, 		// Í 
+	{0, 0}, 		// Î 
+	{0, 0}, 		// Ï 
+	{0, 0}, 		// Ð 
+	{0, 0}, 		// Ñ 
+	{0, 0}, 		// Ò 
+	{0, 0}, 		// Ó 
+	{0, 0}, 		// Ô 
+	{0, 0}, 		// Õ 
+	{6, 1248}, 		// Ö 
+	{0, 0}, 		// × 
+	{0, 0}, 		// Ø 
+	{0, 0}, 		// Ù 
+	{0, 0}, 		// Ú 
+	{0, 0}, 		// Û 
+	{5, 1261}, 		// Ü 
+	{0, 0}, 		// Ý 
+	{0, 0}, 		// Þ 
+	{5, 1274}, 		// ß 
+	{0, 0}, 		// à 
+	{0, 0}, 		// á 
+	{0, 0}, 		// â 
+	{0, 0}, 		// ã 
+	{4, 1287}, 		// ä 
+	{0, 0}, 		// å 
+	{0, 0}, 		// æ 
+	{0, 0}, 		// ç 
+	{0, 0}, 		// è 
+	{0, 0}, 		// é 
+	{0, 0}, 		// ê 
+	{0, 0}, 		// ë 
+	{0, 0}, 		// ì 
+	{0, 0}, 		// í 
+	{0, 0}, 		// î 
+	{0, 0}, 		// ï 
+	{0, 0}, 		// ð 
+	{0, 0}, 		// ñ 
+	{0, 0}, 		// ò 
+	{0, 0}, 		// ó 
+	{0, 0}, 		// ô 
+	{0, 0}, 		// õ 
+	{6, 1300}, 		// ö 
+	{0, 0}, 		// ÷ 
+	{0, 0}, 		// ø 
+	{0, 0}, 		// ù 
+	{0, 0}, 		// ú 
+	{0, 0}, 		// û 
+	{4, 1313}, 		// ü 
 };
 
 // Font information for Roboto 8pt
 const FONT_INFO roboto_8ptFontInfo =
 {
-	12, //  Character height
+	13, //  Character height
 	'!', //  Start character
-	'~', //  End character
-	1, //  Width, in pixels, of space character
+	0x81, //  End character
+	2, //  Width, in pixels, of space character
 	roboto_8ptDescriptors, //  Character descriptor array
 	roboto_8ptBitmaps, //  Character bitmap array
 };
-
