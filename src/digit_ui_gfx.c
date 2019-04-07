@@ -174,10 +174,13 @@ void render_timestamped_line(char *text, uint8_t minutes, const packed_image_t *
     char timeString[2];
     sprintf((char *)timeString, (const char *)"%d", minutes);
     uint8_t timeLength = measure(timeString);
-    int16_t printX = DISPLAY_CENTER_X - measure(text) / 2 + icon->width / 2 + timeLength / 2 + TIME_ICON_PADDING / 2;
-    if (printX < 0)
+    int16_t printX = DISPLAY_CENTER_X - (measure(text) + icon->width + timeLength + TIME_ICON_PADDING)/2;
+    double borderPadding = border_padding(y, p_font->height);
+    if (printX < borderPadding)
     {
-        printX = icon->width + timeLength + TIME_ICON_PADDING + border_padding(y, p_font->height);
+        printX = icon->width + timeLength + TIME_ICON_PADDING + borderPadding;
+    } else {
+        printX = DISPLAY_CENTER_X - (measure(text) - icon->width - timeLength - TIME_ICON_PADDING)/2;
     }
     nrf_gfx_point_t text_start = NRF_GFX_POINT(printX, y);
     nrf_gfx_print(&nrf_lcd_buffer_display, &text_start, 1, text, p_font, false);
