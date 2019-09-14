@@ -9,6 +9,9 @@
 
 #define ARRAY_LEN(x) (sizeof(x) / sizeof(x[0]))
 
+#define SHOW_BEFORE_START_SECS (1800)
+#define SHOW_AFTER_ARRIVE_SECS (300)
+
 // static uint8_t overflow_minutes(int16_t minutes)
 // {
 //     if (minutes < 0)
@@ -20,27 +23,33 @@
 
 typedef struct
 {
-    double departureIn;
-    directions_leg_t *leg_ptr;
-} next_leg_t;
+    double next_leg_departure;
+    directions_leg_t *current_leg_ptr;
+    directions_leg_t *next_leg_ptr;
+} leg_info_t;
 
-static next_leg_t get_next_leg(digit_ui_state_t *state)
+static leg_info_t get_leg_info(digit_ui_state_t *state)
 {
-    next_leg_t next_leg = {
-        .leg_ptr = NULL};
+    leg_info_t leg_info = {
+        .next_leg_ptr = NULL,
+        .current_leg_ptr = NULL};
     for (uint8_t i = 0; i < state->directions.legs_count; i++)
     {
         if ((state->directions.valid_legs & (1 << i)) > 0)
         {
-            next_leg.departureIn = difftime(state->directions.legs[i].departure_time, state->current_time);
-            if (next_leg.departureIn > 0)
+            leg_info.next_leg_departure = difftime(state->directions.legs[i].departure_time, state->current_time);
+            if (leg_info.next_leg_departure > 0)
             {
-                next_leg.leg_ptr = &state->directions.legs[i];
+                leg_info.next_leg_ptr = &state->directions.legs[i];
                 break;
+            }
+            else
+            {
+                leg_info.current_leg_ptr = &state->directions.legs[i];
             }
         }
     }
-    return next_leg;
+    return leg_info;
 }
 
 void digit_ui_render(digit_ui_state_t *state)
@@ -53,18 +62,13 @@ void digit_ui_render(digit_ui_state_t *state)
     if (state->display_options.event_active && !state->display_options.directions_active)
     {
         double startIn = difftime(state->event_start_time, state->current_time);
-        if (startIn >= 0 && startIn <= 1800)
+        if (startIn >= 0 && startIn <= SHOW_BEFORE_START_SECS)
         {
             render_timestamped_line(state->event_subject, (uint8_t)(startIn / 60), &icon_event, 80);
         }
     }
     else if (state->display_options.directions_active && state->display_options.event_active)
     {
-        struct tm departureTime = *localtime(&state->directions.departure_time);
-        struct tm arrivalTime = *localtime(&state->directions.arrival_time);
-
-        draw_arc_line(departureTime.tm_min, &icon_leave2);
-        draw_arc_line(arrivalTime.tm_min, &icon_target);
         double late = difftime(state->event_start_time, state->directions.arrival_time);
         if (late > 0)
         {
@@ -73,10 +77,18 @@ void digit_ui_render(digit_ui_state_t *state)
         {
         }
         double leaveIn = difftime(state->directions.departure_time, state->current_time);
-        next_leg_t next_leg = get_next_leg(state);
+        double arriveIn = difftime(state->directions.arrival_time, state->current_time);
+        if (leaveIn <= SHOW_BEFORE_START_SECS && arriveIn >= 0 - SHOW_AFTER_ARRIVE_SECS)
+        {
+            struct tm departureTime = *localtime(&state->directions.departure_time);
+            struct tm arrivalTime = *localtime(&state->directions.arrival_time);
+            draw_arc_line(departureTime.tm_min, &icon_leave2);
+            draw_arc_line(arrivalTime.tm_min, &icon_target);
+        }
+        leg_info_t leg_info = get_leg_info(state);
         char line_display[20];
 
-        if (leaveIn >= 0 && leaveIn <= 1800)
+        if (leaveIn >= 0 && leaveIn <= SHOW_BEFORE_START_SECS)
         {
             render_timestamped_line(state->event_subject, (uint8_t)(leaveIn / 60), &icon_event, 80);
             // if (NULL != next_leg.leg_ptr)
@@ -87,11 +99,16 @@ void digit_ui_render(digit_ui_state_t *state)
         }
         else
         {
-            if (NULL != next_leg.leg_ptr)
+            if (NULL != leg_info.next_leg_ptr)
             {
-                snprintf(line_display, ARRAY_LEN(line_display), "%s %s", next_leg.leg_ptr->line, next_leg.leg_ptr->direction);
-                render_timestamped_line(line_display, (uint8_t)(next_leg.departureIn / 60), &icon_transit, 70 + roboto_8ptFontInfo.height);
-                render_text_centered(next_leg.leg_ptr->departure_stop, 70);
+                snprintf(line_display, ARRAY_LEN(line_display), "%s %s", leg_info.next_leg_ptr->line, leg_info.next_leg_ptr->direction);
+                render_timestamped_line(line_display, (uint8_t)(leg_info.next_leg_departure / 60), &icon_transit, 70 + roboto_8ptFontInfo.height);
+                render_text_centered(leg_info.next_leg_ptr->departure_stop, 70);
+            }
+            else if (NULL != leg_info.current_leg_ptr && arriveIn >= 0)
+            {
+                render_timestamped_line("Ankunft", (uint8_t)(arriveIn / 60), &icon_walk, 70 + roboto_8ptFontInfo.height);
+                render_text_centered(leg_info.current_leg_ptr->arrival_stop, 70);
             }
         }
     }
