@@ -30,46 +30,46 @@ const packed_image_t icon_alarm = {
     .startBit = 0,
     .width = 12,
     .height = 12,
-    .data = &data};
+    .data = data};
 
 const packed_image_t icon_event = {
     .startByte = 4,
     .startBit = 16,
     .width = 12,
     .height = 12,
-    .data = &data};
+    .data = data};
 
 const packed_image_t icon_leave1 = {
     .startByte = 9,
     .startBit = 0,
     .width = 7,
     .height = 7,
-    .data = &data};
+    .data = data};
 
 const packed_image_t icon_leave2 = {
     .startByte = 10,
     .startBit = 17,
     .width = 7,
     .height = 7,
-    .data = &data};
+    .data = data};
 
 const packed_image_t icon_target = {
     .startByte = 12,
     .startBit = 2,
     .width = 7,
     .height = 7,
-    .data = &data};
+    .data = data};
 
 const packed_image_t icon_transit = {
     .startByte = 13,
     .startBit = 19,
     .width = 12,
     .height = 12,
-    .data = &data};
+    .data = data};
 
 const packed_image_t icon_walk = {
     .startByte = 18,
     .startBit = 3,
     .width = 12,
     .height = 12,
-    .data = &data};
+    .data = data};
