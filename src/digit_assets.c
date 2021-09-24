@@ -5,7 +5,16 @@ const uint32_t data[] = {0x86678300,
 	0x12011025,
 	0x2112112f,
 	0x78586102,
-	0x13fe3006,
+	0xffff3006,
+	0x3fffff3f,
+	0x3300003,
+	0xc03300c,
+	0xf03f03f0,
+	0x3f03f03,
+	0xc03f00c,
+	0x30000330,
+	0xff3fffff,
+	0x13fe3fff,
 	0x701f0170,
 	0x1d701701,
 	0x1f1d71d7,
@@ -32,43 +41,50 @@ const packed_image_t icon_alarm = {
     .height = 12,
     .data = data};
 
-const packed_image_t icon_event = {
+const packed_image_t icon_battery_saver = {
     .startByte = 4,
+    .startBit = 16,
+    .width = 12,
+    .height = 24,
+    .data = &data};
+
+const packed_image_t icon_event = {
+    .startByte = 13,
     .startBit = 16,
     .width = 12,
     .height = 12,
     .data = data};
 
 const packed_image_t icon_leave1 = {
-    .startByte = 9,
+    .startByte = 18,
     .startBit = 0,
     .width = 7,
     .height = 7,
     .data = data};
 
 const packed_image_t icon_leave2 = {
-    .startByte = 10,
+    .startByte = 19,
     .startBit = 17,
     .width = 7,
     .height = 7,
     .data = data};
 
 const packed_image_t icon_target = {
-    .startByte = 12,
+    .startByte = 21,
     .startBit = 2,
     .width = 7,
     .height = 7,
     .data = data};
 
 const packed_image_t icon_transit = {
-    .startByte = 13,
+    .startByte = 22,
     .startBit = 19,
     .width = 12,
     .height = 12,
     .data = data};
 
 const packed_image_t icon_walk = {
-    .startByte = 18,
+    .startByte = 27,
     .startBit = 3,
     .width = 12,
     .height = 12,
