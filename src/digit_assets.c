@@ -46,7 +46,7 @@ const packed_image_t icon_battery_saver = {
     .startBit = 16,
     .width = 12,
     .height = 24,
-    .data = &data};
+    .data = data};
 
 const packed_image_t icon_event = {
     .startByte = 13,
