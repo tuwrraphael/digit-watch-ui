@@ -112,4 +112,10 @@ void digit_ui_render(digit_ui_state_t *state)
             }
         }
     }
+    if (state->whatsapp_message_count > 0)
+    {
+        char message_count_display[20];
+        snprintf(message_count_display, ARRAY_LEN(message_count_display), "W: %d", state->whatsapp_message_count);
+        render_text_centered(message_count_display, 40);
+    }
 }

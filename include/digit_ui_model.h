@@ -28,7 +28,8 @@ typedef struct
     time_t arrival_time;
 } directions_t;
 
-typedef union {
+typedef union
+{
     struct
     {
         uint8_t directions_active : 1;
@@ -45,6 +46,7 @@ typedef struct
     directions_t directions;
     uint8_t displayed_step;
     digit_ui_state_flags_t display_options;
+    uint8_t whatsapp_message_count;
 } digit_ui_state_t;
 
 #define DIGIT_UI_STATE_DEFAULT           \
@@ -54,7 +56,8 @@ typedef struct
         .displayed_step = 1,             \
         .directions = {.legs_count = 0,  \
                        .legs = NULL,     \
-                       .valid_legs = 0 } \
+                       .valid_legs = 0}, \
+        .whatsapp_message_count = 0,     \
     }
 
 #endif
