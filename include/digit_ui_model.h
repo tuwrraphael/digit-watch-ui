@@ -47,6 +47,7 @@ typedef struct
     uint8_t displayed_step;
     digit_ui_state_flags_t display_options;
     uint8_t whatsapp_message_count;
+    uint8_t email_count;
 } digit_ui_state_t;
 
 #define DIGIT_UI_STATE_DEFAULT           \
@@ -58,6 +59,7 @@ typedef struct
                        .legs = NULL,     \
                        .valid_legs = 0}, \
         .whatsapp_message_count = 0,     \
+        .email_count = 0,                \
     }
 
 #endif
