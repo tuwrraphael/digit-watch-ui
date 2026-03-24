@@ -168,15 +168,17 @@ static double border_padding(uint8_t y, uint8_t height)
 }
 
 #define MSG_ICON_PADDING (4)
-void render_messages_bar(uint8_t num_services, uint8_t message_counts[MSG_SERVICES], const packed_image_t *icons[MSG_SERVICES], uint8_t y)
+void render_messages_bar(uint8_t message_counts[MSG_SERVICES], const packed_image_t *icons[MSG_SERVICES], uint8_t y)
 {
     uint8_t totalWidth = 0;
     char countStr[MSG_SERVICES][2];
     uint8_t countLengths[MSG_SERVICES];
-    for (uint8_t i = 0; i < num_services; i++)
+    for (uint8_t i = 0; i < MSG_SERVICES; i++)
     {
         if (message_counts[i] == 0)
         {
+            countLengths[i] = 0;
+            countStr[i][0] = '\0';
             continue;
         }
         if (message_counts[i] > 99)
@@ -188,7 +190,7 @@ void render_messages_bar(uint8_t num_services, uint8_t message_counts[MSG_SERVIC
         totalWidth += icons[i]->width + countLengths[i] + MSG_ICON_PADDING;
     }
     int16_t printX = DISPLAY_CENTER_X - (totalWidth)/2;
-    for (uint8_t i = 0; i < num_services; i++)
+    for (uint8_t i = 0; i < MSG_SERVICES; i++)
     {
         if (message_counts[i] == 0)
         {

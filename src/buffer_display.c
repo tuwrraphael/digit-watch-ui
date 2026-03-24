@@ -55,7 +55,7 @@ static void disp_def_rotation_set(nrf_lcd_rotation_t rotation)
 {
 }
 
-static void disp_def_display_invert(uint8_t invert)
+static void disp_def_display_invert(bool invert)
 {
 }
 
