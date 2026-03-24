@@ -11,7 +11,9 @@
 
 static const FONT_INFO *p_font = &roboto_8ptFontInfo;
 
+#ifndef M_PI
 #define M_PI (3.14159265358979323846)
+#endif
 
 void render_packed_image(const packed_image_t *img, uint8_t m_x, uint8_t m_y)
 {
@@ -163,6 +165,42 @@ static double border_padding(uint8_t y, uint8_t height)
         return DISPLAY_CENTER_X;
     }
     return (DISPLAY_CENTER_X - sqrt(BORDER_RADIUS * BORDER_RADIUS - (y - DISPLAY_CENTER_Y) * (y - DISPLAY_CENTER_Y)));
+}
+
+#define MSG_ICON_PADDING (4)
+void render_messages_bar(uint8_t num_services, uint8_t message_counts[MSG_SERVICES], const packed_image_t *icons[MSG_SERVICES], uint8_t y)
+{
+    uint8_t totalWidth = 0;
+    char countStr[MSG_SERVICES][2];
+    uint8_t countLengths[MSG_SERVICES];
+    for (uint8_t i = 0; i < num_services; i++)
+    {
+        if (message_counts[i] == 0)
+        {
+            continue;
+        }
+        if (message_counts[i] > 99)
+        {
+            message_counts[i] = 99;
+        }
+        sprintf((char *)countStr[i], (const char *)"%d", message_counts[i]);
+        countLengths[i] = measure((char *)countStr[i]);
+        totalWidth += icons[i]->width + countLengths[i] + MSG_ICON_PADDING;
+    }
+    int16_t printX = DISPLAY_CENTER_X - (totalWidth)/2;
+    for (uint8_t i = 0; i < num_services; i++)
+    {
+        if (message_counts[i] == 0)
+        {
+            continue;
+        }
+        uint8_t countLength = countLengths[i];
+        nrf_gfx_point_t text_start = NRF_GFX_POINT(printX, y);
+        nrf_gfx_print(&nrf_lcd_buffer_display, &text_start, 1, (char *)countStr[i], p_font, false);
+        printX += countLength + MSG_ICON_PADDING;
+        render_packed_image(icons[i], (uint8_t)printX, y);
+        printX += icons[i]->width;
+    }
 }
 
 void render_timestamped_line(char *text, uint8_t minutes, const packed_image_t *icon, uint8_t y)

@@ -32,7 +32,12 @@ const uint32_t data[] = {0x86678300,
 	0x9f0f386,
 	0xce6bc6fc,
 	0x338678,
-	0x1};
+	0x87f80001,
+	0xf0a60980,
+	0x6ccccd8a,
+	0x21d41ec0,
+	0x78186201,
+	0x0};
 
 const packed_image_t icon_alarm = {
     .startByte = 0,
@@ -86,6 +91,13 @@ const packed_image_t icon_transit = {
 const packed_image_t icon_walk = {
     .startByte = 27,
     .startBit = 3,
+    .width = 12,
+    .height = 12,
+    .data = data};
+
+const packed_image_t icon_whatsapp = {
+    .startByte = 31,
+    .startBit = 19,
     .width = 12,
     .height = 12,
     .data = data};
