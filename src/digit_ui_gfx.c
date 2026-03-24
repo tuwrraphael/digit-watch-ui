@@ -187,7 +187,7 @@ void render_messages_bar(uint8_t message_counts[MSG_SERVICES], const packed_imag
         }
         sprintf((char *)countStr[i], (const char *)"%d", message_counts[i]);
         countLengths[i] = measure((char *)countStr[i]);
-        totalWidth += icons[i]->width + countLengths[i] + MSG_ICON_PADDING;
+        totalWidth += icons[i]->width + countLengths[i] + MSG_ICON_PADDING + (totalWidth > 0 ? MSG_ICON_PADDING : 0);
     }
     int16_t printX = DISPLAY_CENTER_X - (totalWidth)/2;
     for (uint8_t i = 0; i < MSG_SERVICES; i++)
@@ -201,7 +201,7 @@ void render_messages_bar(uint8_t message_counts[MSG_SERVICES], const packed_imag
         nrf_gfx_print(&nrf_lcd_buffer_display, &text_start, 1, (char *)countStr[i], p_font, false);
         printX += countLength + MSG_ICON_PADDING;
         render_packed_image(icons[i], (uint8_t)printX, y);
-        printX += icons[i]->width;
+        printX += icons[i]->width + MSG_ICON_PADDING;
     }
 }
 

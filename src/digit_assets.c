@@ -20,14 +20,14 @@ const uint32_t data[] = {0x86678300,
 	0x1f1d71d7,
 	0x3fe70,
 	0x9f30511c,
-	0x8107154,
-	0x41c7c204,
-	0x145051fc,
-	0xd14,
-	0x1931b9fe,
-	0xf71f71f7,
-	0xf1971f71,
-	0x1fe31b,
+	0x87f87154,
+	0x50850860,
+	0x48448488,
+	0x85084884,
+	0x7f860850,
+	0xc2040810,
+	0x51fc41c7,
+	0xd141450,
 	0x8000000,
 	0x9f0f386,
 	0xce6bc6fc,
@@ -37,7 +37,11 @@ const uint32_t data[] = {0x86678300,
 	0x6ccccd8a,
 	0x21d41ec0,
 	0x78186201,
-	0x0};
+	0xb9fe0000,
+	0x71f71931,
+	0x1f71f71f,
+	0xe31bf197,
+	0x1f};
 
 const packed_image_t icon_alarm = {
     .startByte = 0,
@@ -67,25 +71,25 @@ const packed_image_t icon_leave1 = {
     .height = 7,
     .data = data};
 
-const packed_image_t icon_leave2 = {
+const packed_image_t icon_mail = {
     .startByte = 19,
     .startBit = 17,
+    .width = 12,
+    .height = 12,
+    .data = data};
+
+const packed_image_t icon_leave2 = {
+    .startByte = 24,
+    .startBit = 1,
     .width = 7,
     .height = 7,
     .data = data};
 
 const packed_image_t icon_target = {
-    .startByte = 21,
-    .startBit = 2,
+    .startByte = 25,
+    .startBit = 18,
     .width = 7,
     .height = 7,
-    .data = data};
-
-const packed_image_t icon_transit = {
-    .startByte = 22,
-    .startBit = 19,
-    .width = 12,
-    .height = 12,
     .data = data};
 
 const packed_image_t icon_walk = {
@@ -98,6 +102,13 @@ const packed_image_t icon_walk = {
 const packed_image_t icon_whatsapp = {
     .startByte = 31,
     .startBit = 19,
+    .width = 12,
+    .height = 12,
+    .data = data};
+
+const packed_image_t icon_transit = {
+    .startByte = 36,
+    .startBit = 3,
     .width = 12,
     .height = 12,
     .data = data};

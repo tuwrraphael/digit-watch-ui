@@ -3,7 +3,7 @@
 #include "packed_image.h"
 #include <stdint.h>
 
-#define MSG_SERVICES (1)
+#define MSG_SERVICES (2)
 
 void render_packed_image(const packed_image_t *img, uint8_t m_x, uint8_t m_y);
 void draw_time_indicator(float s, float indicator_length, uint8_t thickness);

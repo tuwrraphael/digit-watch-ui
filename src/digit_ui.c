@@ -112,5 +112,5 @@ void digit_ui_render(digit_ui_state_t *state)
             }
         }
     }
-    render_messages_bar((uint8_t[]){state->whatsapp_message_count}, (const packed_image_t *[]){&icon_whatsapp}, 30);
+    render_messages_bar((uint8_t[]){state->whatsapp_message_count, state->email_count}, (const packed_image_t *[]){&icon_whatsapp, &icon_mail}, 30);
 }
